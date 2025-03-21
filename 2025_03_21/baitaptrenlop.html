@@ -10,8 +10,68 @@
     <form action='' method ='GET'>
         Họ và tên: <input type ='text' name="ho_ten" size ='30' maxlength = '30' placeholder = 'Nhập vào họ tên' value ='Hoàng Cao Nguyên'></form action='' method ='GET'><br>
         <input type ='text' name = 'mat_khau' size '100' maxlength = '30' placeholder = 'nhập vào mật khẩu' value="0377378328"><br>
-        <textarea name = 'gioi_thieu' cols='70' rows ='40' placeholder = 'Bạn hãy giới thiệu qua về bản thân mình'></textarea><br>
+        <textarea name = 'gioi_thieu' cols='70' rows ='40'
+         placeholder = 'Bạn hãy giới thiệu qua về bản thân mình'></textarea><br>
+
+        <input type="radio" name="ket_qua" value="a" checked="checked" /> Đáp án A  
+        <input type="radio" name="ket_qua" value="b" /> Đáp án B  
+        <input type="radio" name="ket_qua" value="c" /> Đáp án C 
+        
+        <pre>
+            Sở thích của bạn:   
+        <input type="checkbox" name="so_thich" value="nghe_nhac" checked="checked" /> Nghe nhạc  
+        <input type="checkbox" name="so_thich " value="choi_game" /> Chơi game  
+        <input type="checkbox" name="so_thich " value="ve_tranh" /> vẽ tranh
+
+        </pre>
+        
+        <pre>
+            Chọn nơi bạn đang sống   
+        <select name="thanh_pho">  
+          <option value="">--Chọn thành phố---</option>  
+          <option value="hanoi">Hà Nội</option>  
+          <option value="hochiminh">TP Hồ Chí Minh</option>  
+          <option value="thaibinh">Thái Bình</option>  
+        </select> 
+        </pre>
+        
+        <pre>
+             Chọn nơi bạn đã từng sinh sống <br>  
+        <select name="thanh_pho" size="4" multiple="multiple">  
+            <option value="hanoi" selected="selected"> Hà Nội</option>  
+            <option value="hochiminh">TP Hồ Chí Minh</option>  
+            <option value="danang" selected="selected">Đà Nẵng</option>  
+            <option value="dalat">Đà Lạt</option>  
+            <option value="sapa">Sapa</option>  
+            <option value="Kienxuong">Kiến Xương</option>  
+        </select> 
+        </pre>
+       
+        <pre>
+             File đính kèm  
+        <input type="file" name="avatar" accept="image/*"/> <br/> 
+        </pre>
+       
+        <pre>
+            <p>Nhận bài viết mới nhất</p>  
+        <input type="text" name="email" />  
+        <input type="submit" name="dangky" value="Đăng ký" /> 
+
+        <input type="hidden" name="an_so" value="demo" />  
+
+        <input type="text" name="name" required/> <br/>  
+
+        <input type="date" name="date_of_birth" id="date_of_birth"/> <br/>  
+
+        <input type="email" name="email" id="email" placeholder="Email"/> <br/>
+
+        <input type="url" name="website" id="website"/> <br/>
+        </pre>
+         
     <form 
     
+    
+
+
 </body>
 </html>
