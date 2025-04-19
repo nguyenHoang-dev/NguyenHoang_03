@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tro thanh vua bong toi</title>
+    <style type="text/css">
+        #thu_do{
+            color: red
+        }
+        #thanh_pho{
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        li{
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        ul{
+            list-style-type: symbols(circle);
+            margin-left: 20px;
+        }
+        .mien_bac{
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .mien_nam{
+            color: rgb(129, 63, 63);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        div ~ p{
+            background-color:beige
+        }
+        a:visited {
+            color:blue;
+        }
+
+        a:link{
+            color:gray
+        }
+
+        a:hover{
+            color: aqua;
+        }
+
+        a:active{
+            color: red;
+        }
+    
+        p::first-letter{
+            font-size: 30px;
+            color: red;
+        }   
+
+        p::first-line{
+            font-variant: small-caps;
+            color: red;
+        }
+
+        h1::before{
+            content: "xin chao, ";
+        }
+        
+        h2::after{
+            content:"!!! ";
+        }
+
+        a[target='_blank']{
+            background-color: yellow;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="thu_do">Hà Nội</li>
+        <li id="thanh_pho">Nam Định</li>
+        <li>Ninh Bình</li>
+        <li>Thái Bình</li>
+        <li>Hải Phòng</li>
+    </ul>
+
+    <ul>
+        <li class="mien_bac">Ha Noi</li>
+        <li class="mien_bac">Nam Định</li>
+        <li class="mien_nam">Ninh Bình</li>
+        <li class="mien_nam">Ho Chi Minh</li>
+    </ul>
+
+    <div>
+        <p>the 1 trong div</p>
+        <p>the 2 trong div</p>
+        <section>
+            <p>the 3 trong div</p>
+            <p>the 4 trong div</p>
+        </section>  
+    </div>
+    <p>the ngoai the div 1</p>
+    <p>the ngoai the div 2</p>
+
+    <h2>link khong quang cao</h2>
+    <p><b><a href="https://vnua.edu.vn" target="_blank">bam vao link o day</a></b></p>
+
+    <p>chao mung ban den voi mon hoc htmlhtml</p>
+
+    <p>Some more text. And even more, and more, and more, and more,
+        and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+    <h1>toi la nguyen dep trai </h1>
+    <h2>toi la nguyen dep trai</h2>
+
+    <a href="https://vnua.edu.vn" target="_blank">phat trien ung dung</a>
+    
+</body> 
+</html>
