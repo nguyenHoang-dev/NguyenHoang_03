@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    background: #f5f5f5;
+    justify-content: center;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .box1 { background: #e74c3c; width: 100px; height: 100px; }
+  .box2 { background: #2980b9; width: 120px; height: 80px; }
+  .box3 { background: #27ae60; width: 80px; height: 120px; }
+  .box4 { background: #f39c12; width: 150px; height: 100px; color: black; }
+  .box5 { background: #8e44ad; width: 100px; height: 100px; }
+  .box6 { background: #16a085; width: 90px; height: 90px; }
+  .box7 { background: #d35400; width: 110px; height: 110px; }
+  .box8 { background: #2c3e50; width: 130px; height: 70px; }
+
+  body {
+    font-family: sans-serif;
+    background: #f8e9ff;
+    padding: 30px;
+  }
+
+  h2 {
+    text-transform: lowercase;
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .label {
+    width: 80px;
+    font-weight: bold;
+  }
+
+  .container {
+    display: flex;
+    width: 250px;
+    height: 120px;
+    background: rebeccapurple;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  .container.stretch > .item {
+    align-self: stretch;
+  }
+
+  .item {
+    background: orange;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+
+  .flex-start  { align-items: flex-start; }
+  .flex-end    { align-items: flex-end; }
+  .center      { align-items: center; }
+  .stretch     { align-items: stretch; }
+  .baseline    { align-items: baseline; }
+
+  /* Different heights to simulate visual style */
+  .h1 { height: 80px; }
+  .h2 { height: 50px; }
+  .h3 { height: 30px; }
