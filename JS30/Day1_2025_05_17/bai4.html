@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tongSoLe(n) {
+            sum =0;
+            for ( i = 1; i <= n; i++ ) {
+                if ( i % 2 != 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        n = Number(prompt("Nhap so n: "))
+        document.writeln("tong cac so le tu 1 den " + n + " la: " + tongSoLe(n))
+    </script>
+</body>
+</html>

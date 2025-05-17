@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function demSoChiaHet(a, b) {
+            count = 0;
+            for (let i = 1; i <= 100; i++) {
+                if ((i % a == 0) && (i % b == 0)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        count = demSoChiaHet(3, 5);
+        document.writeln("Có " + count + " số chia hết cho 3 và 5 trong khoảng từ 1 đến 100");
+    </script>
+</body>
+</html>
