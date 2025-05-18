@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function daoNguocChuoi(str){
+            var str = str.trim(); // Xoá khoảng trắng đầu và cuối .trim()
+            var str1 = "";       // nơi chứa chuỗi rỗng
+            for (var i = str.length - 1; i >= 0; i--){   // Duyệt từ cuối chuỗi đến đầu ( i >=0) và i -- sẽ giảm dần các phần từ bị trừtrừ
+                str1 += str[i];    
+            }
+            return str1;
+        }
+        var str = prompt("nhap chuoi: ");
+        var str1 = daoNguocChuoi(str);
+        document.writeln("chuoi dao nguoc la: " + str1);
+    </script>https://chatgpt.com/c/67e59bd7-11c0-8003-b1d6-493871030f6c
+</body>
+
+</html>
