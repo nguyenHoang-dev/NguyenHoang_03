@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = new Array(1,2,3,4,5);
+        var arr2 = [6,7,8,9]; // Declare arr2 for concat and push operations
+        document.write(arr1.join('-'));
+        document.write(arr1.reverse());
+        alert(arr1.length);
+        document.write(arr1.concat(arr2));
+        document.write(arr1.slice(1,3));
+        console.log(arr1.reverse());
+        console.log(arr1.sort());
+        arr2.push(50);
+        console.log(arr1);
+        arr1.pop();
+        console.log(arr1);
+        arr1.unshift(10,12);
+        console.log(arr1);
+        arr1.shift();
+        document.writeln(arr1);
+    </script>
+
+</body>
+</html>
