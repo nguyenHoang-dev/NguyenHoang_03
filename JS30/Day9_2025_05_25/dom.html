@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
+</head> 
+<body>
+    <div class="main">
+        <h2>Chon ảnh nền trang</h2>
+        <div class="main-content">
+            <select id="imageSelect">
+                <option value="url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/07/anh-thien-nhien-dep-3d-22.jpg')">ảnh núi</option>
+                <option value="url('https://marketplace.canva.com/MADPiOKlu4w/1/thumbnail_large-1/canva-spring-nature-MADPiOKlu4w.jpg')">ảnh cây</option>
+                <option value="url('https://www.winwinstore.vn/wp-content/uploads/2021/07/anh-thien-van-01.jpg')">ảnh cực quang</option>
+            </select>
+        </div>    
+        <div class="main-content1">
+            <button onclick="changeBackground()">Đổi ảnh nền</button>
+        </div>
+    </div>
+
+    <script>
+        function changeBackground(){
+            const select = document.getElementById('imageSelect');
+            const selectedValue = select.value;
+            document.body.style.backgroundImage = selectedValue;
+        }
+    </script>
+</body>
+</html>
