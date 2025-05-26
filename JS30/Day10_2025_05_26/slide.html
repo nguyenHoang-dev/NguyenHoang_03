@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="slideshow-container">
+        <h2>Trình chiếu ảnh bằng Dom</h2>
+        <div class="myslides"></div>
+            <img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/482754BMJ/anh-mo-ta.png">
+        </div>
+
+        <div class="myslides">
+            <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/hinh-nen-vu-tru-25.jpg ">
+        </div>
+
+        <div class="myslides">
+            <img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474093pRy/3d-space-wallpaper_103607863.jpg">
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="plusSlide(-1)"><-- Trước</button>
+        <button onclick="plusSlide(1)">Sau --></button>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        function plusSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function showSlide(n){
+            let i;
+            let slides = document.getElementsByClassName("myslides");
+            if (n > slides.length){
+                slideIndex = 1
+            }
+            if ( n < 1) {
+                slideIndex = slide.length
+            }
+            for ( i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+            
+    </script>
+    
+    
+</body>
+</html>
