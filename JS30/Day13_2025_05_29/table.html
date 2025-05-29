@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Thêm sinh viên vào danh sách</h2>
+        <div class="form-group">
+            <label for="maSV">Mã sinh viên:</label>
+            <input type="text" id="maSV">
+        </div>
+        <div class="form-group">
+            <label for="hoTen">Họ tên:</label>
+            <input type="text" id="hoTen">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+        </div>
+        <div class="form-group">
+            <label for="sdt">Số điện thoại:</label>
+            <input type="text" id="sdt">
+        </div>
+        <button onclick="themSinhVien()">Thêm</button>
+    </div>
+
+    <table id="danhSachSinhVien">
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>SDT</th>
+            </tr>
+        </thead>
+
+        <tbody id="danhSachBody">
+            <tr>
+                <td>UD001</td>
+                <td>Võ Văn A</td>
+                <td>abc@gmail.com</td>
+                <td>087123123</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function themSinhVien() {
+            const maSV = document.getElementById('maSV').value;
+            const hoTen = document.getElementById('hoTen').value;
+            const email = document.getElementById('email').value;
+            const sdt = document.getElementById('sdt').value;
+
+            if (maSV && hoTen && email && sdt) {
+
+                const newRow = document.createElement('tr');
+
+                newRow.innerHTML = `
+                    <td>${maSV}</td>
+                    <td>${hoTen}</td>
+                    <td>${email}</td>
+                    <td>${sdt}</td>
+                `;
+                const danhSachBody = document.getElementById('danhSachBody');
+                danhSachBody.appendChild(newRow);
+
+                document.getElementById('maSV').value = '';
+                document.getElementById('hoTen').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('sdt').value = '';
+            } else {
+                alert('Vui lòng nhập đầy đủ thông tin!');
+            }
+        }
+    </script>
+</body>
+</html>
