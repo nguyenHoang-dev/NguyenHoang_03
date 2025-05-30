@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Thêm sinh viên vào danh sách</h2>
+        <form>
+            <div class="form-group">
+                <label for="maSV">Mã sinh viên:</label>
+                <input type="text" id="maSV">
+            </div>
+            <div class="form-group">
+                <label for="HoTen">Họ tên:</label>
+                <input type="text" id="HoTen">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" id="phone">
+            </div>
+            <button type="button" id="actionButton">Thêm</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>SDT</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            <tr>
+                <td>UD001</td>
+                <td>Võ Văn A</td>
+                <td>vo.vana@example.com</td>
+                <td>087123123</td>
+                <td><button onclick="editStudent(0)">Sửa</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Mảng lưu trữ sinh viên
+        let students = [
+            { id: "UD001", name: "Võ Văn A", email: "vo.vana@example.com", phone: "087123123" }
+        ];
+        let editingIndex = -1; // Theo dõi sinh viên đang sửa
+        const actionButton = document.getElementById("actionButton");
+
+        // Hàm hiển thị bảng
+        function Table() {
+            const tableBody = document.getElementById("studentTableBody");
+            tableBody.innerHTML = "";
+            students.forEach((student, index) => {
+                const row = `
+                    <tr>
+                        <td>${student.id}</td>
+                        <td>${student.name}</td>
+                        <td>${student.email}</td>
+                        <td>${student.phone}</td>
+                        <td><button onclick="editStudent(${index})">Sửa</button></td>
+                    </tr>`;
+                tableBody.insertAdjacentHTML("beforeend", row); // chèn .innerHTML += row (ko tối ưu)
+            });
+        }
+
+        // Hàm reset form và nút về trạng thái "Thêm"
+        function resetForm() {
+            document.querySelector("form").reset();
+            actionButton.textContent = "Thêm";
+            editingIndex = -1;
+            actionButton.onclick = addStudent; // Gán lại chức năng thêm
+        }
+
+        // Hàm xử lý khi nhấn "Thêm"
+        function addStudent() {
+            const student = {
+                id: document.getElementById("maSV").value,
+                name: document.getElementById("HoTen").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value
+            };
+            if (student.id && student.name && student.email && student.phone) {
+                students.push(student);
+                Table();
+                resetForm();
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin!");
+            }
+        }
+
+        // Hàm xử lý khi nhấn "Sửa"
+        function editStudent(index) {
+            editingIndex = index;
+            const student = students[index];
+            document.getElementById("maSV").value = student.id;
+            document.getElementById("HoTen").value = student.name;
+            document.getElementById("email").value = student.email;
+            document.getElementById("phone").value = student.phone;
+            actionButton.textContent = "Lưu"; // Đổi nút thành "Lưu"
+            actionButton.onclick = saveStudent; // Gán chức năng lưu
+        }
+
+        // Hàm xử lý khi nhấn "Lưu"
+        function saveStudent() {
+            if (editingIndex !== -1) {
+                const updatedStudent = {
+                    id: document.getElementById("maSV").value,
+                    name: document.getElementById("HoTen").value,
+                    email: document.getElementById("email").value,
+                    phone: document.getElementById("phone").value
+                };
+                if (updatedStudent.id && updatedStudent.name && updatedStudent.email && updatedStudent.phone) {
+                    students[editingIndex] = updatedStudent;
+                    Table();
+                    resetForm();
+                } else {
+                    alert("Vui lòng điền đầy đủ thông tin!");
+                }
+            }
+        }
+
+        // Gán ban đầu cho nút "Thêm"
+        actionButton.onclick = addStudent;
+
+    </script>
+</body>
+</html>
+
+Day14_2025_05_30
