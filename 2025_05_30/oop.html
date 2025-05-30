@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+        //  hàm khởi tạo constructor
+        function student(id,name,salary){  
+            this.id = id;  
+            this.name = name;  
+            this.salary = salary;  
+        }  
+            nam= new student('<br>' + "ript001",'<br>' +"Nam Chan Hoan",'<br>' +40000000);  
+            document.write(nam.id+" "+nam.name+" "+nam.salary); 
+
+        //Tạo đối tượng bằng cách tạo ra 1 lớp và định nghĩa phương thức
+        class Person{
+            name;
+            age;
+            salary;
+            hello(){
+                document.write("Hello "+ this.name);
+             }
+
+             changeSalary(newSalary){
+                this.salary = newSalary;
+             }
+        }
+        a = new Person();
+        a.name = "Toi la ai vay";
+        a.hello();
+        a.salary = 1;
+        document.write('<br>'+a.name + ': ' + a.salary);
+        a.changeSalary(12);
+        document.write('<br>'+a.name + ': ' + a.salary);
+
+
+        //luyentap 
+        class Perso{
+            name;
+            age;
+            salary;
+            //constructor() {  
+             //   document.write("nguyendeptrai");
+            //}  
+            constructor (name, age, salary) {
+                this.age = age;
+                this.name = name;
+                this.salary = salary;
+            }
+            hello(){
+                document.write('<br>'+ "Hello "+ this.name);
+             }
+        }
+        nguyen_hoang = new Perso();
+        nguyen_hoang.name = 'Hoang Nguyen';
+        nguyen_hoang.hello();
+
+        cao_nguyen = new Perso("Cao Nguyen",18,5000000);
+        cao_nguyen.hello();
+
+
+        //khi muốn thêm một thuộc tính mới và đối tượng có sẵn ta dùng Prototype.
+        function Student() {
+            this.name = 'nguyen';
+            this.gender = 'H';
+        }
+
+        Student.prototype.age = 1;
+
+        var studObj1 = new Student();
+        alert(studObj1.age); // 1
+
+        var studObj2 = new Student();
+        alert(studObj2.age); // 1
+
+    </script>
+</body>
+</html>
