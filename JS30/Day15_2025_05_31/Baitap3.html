@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+</head>
+<body>
+    <script>
+        class Product {
+            constructor(id, name, price, quantity) {
+                this.id = id;
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+            }
+
+            getvalue() {
+                return this.price * this.quantity;
+            }
+
+            show() {
+                console.log("ID: " + this.id);
+                console.log("Ten: " + this.name);
+                console.log("Gia: " + this.price);
+                console.log("So luong: " + this.quantity);
+            }
+        }
+
+        // Tạo danh sách sản phẩm
+        const products = [
+            new Product(1, "Laptop", 1500.0, 10),
+            new Product(2, "Phone", 800.0, 15),
+            new Product(3, "Tablet", 500.0, 20)
+        ];
+
+        // 1. Hiển thị danh sách sản phẩm
+        console.log("Danh sách sản phẩm:");
+        products.forEach(p => p.show());
+
+        // 2. Tính tổng giá trị hàng tồn kho
+        let totalValue = 0;
+        products.forEach(p => {
+            totalValue += p.getvalue();
+        });
+        console.log("\nTổng giá trị hàng tồn kho: " + totalValue);
+
+        // 3. Tìm sản phẩm có giá cao nhất
+        let maxPriceProduct = products[0];
+        products.forEach(p => {
+            if (p.price > maxPriceProduct.price) {
+                maxPriceProduct = p;
+            }
+        });
+        console.log("\nSản phẩm có giá cao nhất:");
+        maxPriceProduct.show();
+    </script>
+</body>
+</html>
+
+Day15_2025_05_31

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student {
+            constructor(id, name, email, age) {
+                this.id = id;
+                this.name = name;
+                this.email = email;
+                this.age = age;
+            }
+            displayInto(){
+                console.log("id:" + this.id);
+                console.log("name:" + this.name);
+                console.log("email:" + this.email);
+                console.log("age:" + this.age);
+                console.log("---------------------");
+            }
+        }
+
+        student1 = new Student(100, "Hoang Cao Nguyen", "abc123@gmail.com", 25);
+        student2 = new Student(101, "Hoang Thi Trang", "abc456@gmail.com", 27);
+
+        student1.displayInto()
+        student2.displayInto()
+    </script>
+</body>
+</html>
