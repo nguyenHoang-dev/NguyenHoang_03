@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacci(n){
+            if ( n == 0) {
+                return 0;
+            }
+            if ( n == 1){
+                return 1;
+            }
+            var a = 0;
+            var b =1;
+            var c;
+            for ( i = 2;i <= n; i++){
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            return c;
+        }
+        n = Number(prompt("nhap so n: "))
+        document.writeln("so fibonacci thu " + n + "  la: " + fibonacci(n));
+    </script>
+</body>
+</html>

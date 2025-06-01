@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kiemTramatKhau(matkhau){
+            var matkhau = matkhau.trim(); // Xoá khoảng trắng đầu và cuối .trim()
+              var str = "";
+            if ( matkhau.length <= 8){
+                str += " mat khau dai it nhat 8 ky tu";
+            }
+            else{
+                if (matkhau.search(/[A-Z]/) == -1){
+                    str += "mat khau phai co it nhat 1 chu cai viet hoa";
+                }
+                if (matkhau.search(/[a-z]/) == -1){
+                    str += "mat khau phai co it nhat 1 chu cai viet thuong";
+                }
+                if (matkhau.search(/[0-9]/) == -1){
+                    str += "mat khau phai co it nhat 1 chu so";
+                }
+            }
+            return str;
+        }
+        var matkhau = prompt("nhap mat khau: ");
+        var thongbao = kiemTramatKhau(matkhau);
+        if (thongbao == ""){
+            document.writeln("mat khau manh");
+        }
+        else{
+            document.writeln("mat khau khong du manh: " + thongbao);
+        }
+    </script>
+</body>
+</html>
+JS30/Day4_2025_05_20
