@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="form-container">
+        <h2>Quản lí sản phẩm</h2>
+        <div class="search-check">
+            <input type="text" id="timkiem" placeholder="Tìm kiếm">
+            <button onclick="timKiemSanPham()">Tìm kiếm</button>
+        </div>
+        <div class="form-group input-group">
+            <div>
+                <label>ID:</label>
+                <input type="text" id="id" placeholder="ID">
+            </div>
+            <div>
+                <label>Tên:</label>
+                <input type="text" id="ten" placeholder="Tên">
+            </div>
+            <div>
+                <label>Giá:</label>
+                <input type="text" id="gia" placeholder="Giá">
+            </div>
+            <div>
+                <label>Số lượng:</label>
+                <input type="text" id="soLuong" placeholder="Số lượng">
+            </div>
+        </div>
+        <button onclick="themSanPham()">Thêm</button>
+    </div>
+
+    <table id="sanPhamTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng giá trị</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody id="sanPhamBody">
+            <tr>
+                <td>1</td>
+                <td>Iphone 12</td>
+                <td>6,000,000VNĐ</td>
+                <td>3</td>
+                <td>18,000,000VNĐ</td>
+                <td>
+                    <button class="edit" onclick="suaSanPham(this)">Sửa</button>
+                    <button class="delete" onclick="xoaSanPham(this)">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Tổng giá trị tồn kho: <span id="tongGiaTri">18,000,000 VNĐ</span></p>
+    <p>Sản phẩm đắt nhất: <span id="sanPhamDatNhat">Iphone 12 (6,000,000 VNĐ)</span></p>
+
+    <div id="thongBao" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: #e0f7fa; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <p id="thongBaoNoiDung"></p>
+        <button onclick="dongThongBao()">OK</button>
+    </div>
+
+    <script src="dulieu.js" defer></script>
+</body>
+</html>
+JS30/Day18_2025_06_03
