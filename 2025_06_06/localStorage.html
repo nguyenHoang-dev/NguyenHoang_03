@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (typeof(Storage) !== 'undefined') {
+    //localStorage.setItem('udu', '2024'); Hoặc
+    localStorage.udu = 2024;
+} else {
+    alert('Trình duyệt của bạn không hỗ trợ localStorage. Hãy nâng cấp trình duyệt để sử dụng!');
+}
+
+var data = localStorage.getItem('udu'); 
+// hơặc data = localStorage.udu
+alert(data);
+
+var data = localStorage.length;
+alert(data);
+
+localStorage.removeItem('udu')
+
+localStorage.clear()
+
+if ( typeof(Storage) !== "undefined") {
+            //set sesionStorage
+            sessionStorage.setItem('udu','Xin chào UDU');
+            // Hoặc: sessionStorage.udu = "Xin chào UDU"
+            //get sessionStorage
+            sessionStorage.getItem('udu');
+            // Hoặc var d = sessionStorage.udu;
+            //lấy ra số lượng session đã lưu trữ
+            sessionStorage.length;
+            //xóa 1 item localStorage
+            sessionStorage.removeItem('udu');
+            // xóa tất cả item trong sessionStorage
+        } else {
+            alert('Trình duyệt của bạn đã quá cũ. Hãy nâng cấp trình duyệt ngay!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.document.cookie = 'cấu hình';
+    //hoặc
+    document.cookie = 'cấu hình';
+
+    window.document.cookie = 'name=UDU';
+        document.cookie = 'name=UDU; expires=Thu, 4 June 2024 19:55:20 UTC';
+        function setCookie(cname, cvalue, cmin) {
+            const d = new Date();
+            d.setTime(d.getTime() + (cmin*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+    </script>
+</body>
+</html>
+

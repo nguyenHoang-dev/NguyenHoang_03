@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <div>Đợi 3 giây để xem kết quả</div>
+    <script type="text/javascript">
+        function x(){
+            alert('Xin chào, mình là UDU');
+        } 
+        setTimeout(x,3000);
+        
+        //setTimeout(function(){
+          //  alert('Xin chào, mình là UDU');
+        //},3000);
+
+        var t= setTimeout(function(){
+        alert('Xin chào, mình là UDU');
+},3000);
+clearTimeout(t);
+
+// Bạn sẽ không thấy alert được chạy
+
+ var result = document.getElementById('result');
+        var i = 1;
+        setInterval(function(){
+            result.innerText = i;
+            i++; 
+        },1000);
+    </script>
+</body>
+</html>
