@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to create a website in HTML & CSS step by step</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+     <!-- Header Start -->
+    <div class="header">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg fixed-top wow fadeIn" data-wow-delay="0.1s">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="#home" class="nav-item nav-link">Home</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#skill" class="nav-item nav-link">Skills</a>
+           
+                </div>
+                <a href="/" class="navbar-brand">
+                    <h1>WECOME</h1>
+                </a>
+                <div class="navbar-nav me-auto">
+                    <a href="#project" class="nav-item nav-link">Projects</a>
+            
+                    <a href="#contact" class="nav-item nav-link">Sevices</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    </div>
+    <!-- Header End -->
+
+    <!--banner-->
+     <div class="banner" id="home">
+         <div class="app-text">
+             <h3>Welcome back to my website</h3>
+             <h1>this is my personal information</h1>
+
+             <div class="group">
+                 <div class="learn-more">Learn More</div>
+                 <div class="play">
+                     <div class="play-benner">
+                         <i class="fa fa-play"></i>
+                     </div>
+                     <span>Play Now</span>
+                 </div>
+             </div>
+          </div>
+     </div>
+     <div class="social-icons">
+          <ul>
+            <li><a href="https://www.facebook.com/hoagnguyn14" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/nguyen-hoang-346821354/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="http://instagram.com/_howngy.cn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+      </div>
+  </div>
+   <!--banner end-->
+
+  <!--about-->
+  <div class="body-about">
+        <div class="container">
+            <div class="experience-section">
+                <h1>19<span>Old Years</span></h1>
+                <p>Xin chào tất cả mọi người, em tên là Hoàng Cao Nguyên, học tại Học Viện Công Nghệ Bưu Chính Viễn Thông</p>
+                <p class="description">Đây là thông tin cá nhân của em</p>
+                <ul class="Danhsach">
+                    <li>Là một người hòa đồng dễ gần</li>
+                    <li>Ham tìm tòi và phát triển bản thân</li>
+                    <li>Yêu thích cái đẹp và nghệ thuật</li>
+                </ul>
+                <button class="modal-button" onclick="openModal()">Read more</button>
+            </div>
+
+            <div class="start-section">
+                <div class="montheohoc">
+                    <h2>Ngành học theo đuổi</h2>
+                    <div class="start-item">
+                        <img src="https://dataexpertise.in/wp-content/uploads/2023/12/Skills-of-a-Data-Analyst.jpg" alt="Data Analyst">
+                        <h2>Data Analyst</h2>
+                        <p>là chuyên viên phân tích dữ liệu, là người chịu trách nhiệm xử lý, phân tích và trực quan hóa dữ liệu nhằm cung cấp thông tin hữu ích hỗ trợ việc ra quyết định của doanh nghiệp.</p>
+                    </div>
+                    <div class="start-item">
+                        <img src="images/GaAJCwmwsGF7QAKirfUyG5.jpg" alt="Developer">
+                        <h2>Front End Developer</h2>
+                        <p>là việc sử dụng các ngôn ngữ HTML, CSS hay ngôn ngữ lập trình Javascript để các lập trình viên thiết kế ra các giao diện ứng dụng hoặc trang web cho người dùng. Những gì bạn nhìn thấy, “chạm”, “lướt”, tương tác trên màn hình</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <!--about end-->
+
+    <!--skills-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+                <div class="modal-title">
+                    <div class="section">
+                        <img class="images1" src="images/z5965513818361_5a12ca1bf228ef9b115432d199b99cd4.jpg" alt="Hoàng Nguyên">
+                        <div class="section1">Success takes time and effort. “No pain, no gain.” When things get tough, remember, “Where there's a will, there's a way.” Keep going, believe in yourself, and one day you’ll be proud of how far you’ve come.</div>
+                    </div>
+                </div>
+                
+            <div class="skills">
+                <div class="subtitle1">Đây là kỹ năng của tôi</div>
+                <div class="skill">
+                    <div class="skill-name">Web Design</div>
+                    <div class="progress">
+                        <div class="progress-1" style="width: 85%;">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Web Development</div>
+                    <div class="progress">
+                        <div class="progress-1" style="width: 95%;">
+                            <span>95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Front End</div>
+                    <div class="progress">
+                        <div class="progress-1" style="width: 90%;">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Back End</div>
+                    <div class="progress">
+                        <div class="progress-1" style="width: 85%;">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Fullstack</div>
+                    <div class="progress">
+                        <div class="progress-1" style="width: 70%;">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--skills end-->
+
+
+     <script src="data.js"></script>
+</body>
+</html>
