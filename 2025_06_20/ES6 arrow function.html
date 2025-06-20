@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var member = (name, age) => {
+            console.log(name, age);
+        }
+        member("Dương Minh Trí", 4); /* output: "Dương Minh Trí" 4 */
+
+        var member = name => {
+            console.log(name);
+        }
+        member("Dương Minh Trí"); /* output: "Dương Minh Trí" */
+
+        var member = () => {
+            console.log("Dương Minh Trí");
+        }
+        member(); /* output: "Dương Minh Trí" */
+
+        var a = [1, 2, 3];
+        var arr = () => a[0];
+        console.log(arr()); /* output: 1 */
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 10;
+        function myFnc(){
+        console.log(x); /* output: 10, x có ảnh hưởng tới Function */
+        }
+        console.log(x); /* output: 10, x có ảnh hưởng khắp nơi */
+        myFnc();
+
+        var x = 10;
+        function myFnc(){
+        var y = x + 5 /* y được khai báo trong Function */
+        console.log(y); /* output: 15, y chỉ có ảnh hưởng bên trong Function */
+        }
+        console.log(y); /* output: Error */
+        myFnc();
+
+        var x = 10;
+        if (x === 10) {
+        var x = 20; /* x được gán giá trị mới là 20 */
+        console.log(x); /* output: 20 */
+        }
+        console.log(x);  /* output: 20 */
+
+        let x = 10;
+        if (x === 10) {
+        let x = 20; /* x được let với giá trị mới là 20 */
+        console.log(x); /* output: 20, giá trị mới chỉ có tác dụng trong if */
+        }
+        console.log(x);  /* output: 10, x bên ngoài if, nên không bị ảnh hưởng giá trị mới */
+
+        const x = 10;
+        console.log(x);  /* output: 10 */
+        if (x === 10) {
+        x = 20;
+        console.log(x); /* output: Error */
+        }
+    </script>
+</body>
+</html>

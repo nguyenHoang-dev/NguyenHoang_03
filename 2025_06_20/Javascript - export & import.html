@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const member = {
+        name: "Dương Minh Trí"
+        }
+        export default member;
+
+        import member from './member.js';
+        console.log(member()); 
+        /* ouput: "Dương Minh Trí" */
+
+        /* hoặc */
+        import TênBấtKỳ from './member.js';
+        console.log(TênBấtKỳ()); 
+        /* ouput: "Dương Minh Trí" */
+
+            const menbers = {
+            name : "Dương Minh Trí"
+        }
+
+        const info = {
+            event : "New event"
+        }
+        export {member, info}
+
+        /* Import từng function, class theo tên: */
+        import {members, info} from './member.js';
+        console.log(member()); 
+        /* ouput: "Dương Minh Trí" */
+
+        console.log(info()); 
+        /* ouput: New event */
+
+        /* hoặc import tất cả function và class: */
+        import * as TênBấtKỳ from './member.js';
+        console.log(TênBấtKỳ.member()); 
+
+        /* ouput: "Dương Minh Trí" */
+        console.log(TênBấtKỳ.info()); 
+        /* ouput: New event */
+    </script>
+</body>
+</html>

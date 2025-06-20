@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function number(num1, num2, ...numOther){
+        console.log("x:", num1); 
+        console.log("y:", num2);
+        console.log("Other number:", numOther);
+        }
+        number("one", "two", "three", "four", "five", "six");
+        /* ouput: 
+        x: one
+        y: two
+        Other number: (4) ["three", "four", "five", "six"] */
+
+        function number(...numOther){
+        console.log(number.length);
+        }
+        number() /* ouput: 0 */
+        number(7) /* ouput: 1 */
+        number(2, 4, 7) /* ouput: 3 */
+    </script>
+</body>
+</html>
