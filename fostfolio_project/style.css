@@ -31,14 +31,11 @@
             overflow: hidden;
             margin: auto;
             top: 0;
-            left: 0;
-            
-            
+            left: 0;   
         }
         
         .slider {
             display: flex;
-            width: 100%;
             height: 100%;
             transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
             will-change: transform;
@@ -199,7 +196,7 @@
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.9);
             top: 0;
-            box-shadow: 0 0 10px rgba(212, 160, 23, 9);
+            box-shadow: 0 0 10px rgba(212, 160, 23, 0.9);
             
         }
 
@@ -276,7 +273,7 @@
         }
 
         .app-text h3 {
-            margin-top: 100px;
+            margin: 100px 60px;
             font-size: 25px;
             color: #fff;
             font-weight: 900;
@@ -286,12 +283,8 @@
 
         .app-text h1 {
             font-size: 80px;
-            position: relative;
             color: #dad6d6;
-            margin-top: 30px;
-            font-weight: 600;
-            line-height: 1.3;
-            font-family: 'Playfair Display', serif;
+            margin: 30px 60px;
         }
 
         .app-text p {
@@ -373,8 +366,8 @@
             position: relative;
         }
 
-         /********** about CSS *********/
-          .body-about {
+                /* About Section */
+        .body-about {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
@@ -453,23 +446,17 @@
         }
 
         .start-section {
-            width: 70%;
+            width: 50%; 
             display: flex;
             flex-direction: column;
         }
 
-        .montheohoc {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .montheohoc h2 {
-            font-size: 24px;
+        .start-section h2 {
+            margin-top: 10px;
+            font-size: 40px;
             color: #F9D342;
-            margin-bottom: 10px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .start-item {
@@ -503,11 +490,8 @@
             margin: 10px 0 0;
             line-height: 1.5;
         }
-        /********** about CSS end *********/
 
-
-
-        /********** skills CSS *********/
+        /* Skills Modal */
         .modal {
             display: none;
             position: fixed;
@@ -517,96 +501,111 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.7);
             justify-content: center;
             align-items: center;
+            transition: opacity 0.3s ease;
         }
 
         .modal-content {
-            background-image: url(images/Ảnh\ chụp\ màn\ hình\ 2025-06-05\ 110544.png) ;
-            margin: 15% auto;
-            padding: 20px;
-            border: 10px solid #fad84f;
-            width: 80%;
-            max-width: 600px;
-            position: relative;
-            border-radius: 8px;
-             box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            margin: 10% auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .close {
-            position: absolute;
-            top: -5px;
-            right: 20px;
-            font-size: 24px;
+            color: #333;
+            opacity: 0.8;
             cursor: pointer;
-            color: #292826;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #ff4757;
         }
 
         .modal-title {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: bold;
+            text-align: center;
             margin-bottom: 20px;
+            color: #333;
+            width: 100%;
         }
 
-        .section {
+        .skills-container {
             display: flex;
             flex-direction: row;
-            gap: 5px;
+            gap: 20px;
+            width: 100%;
         }
-        .section1{
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-        .section img{
+
+        .skills-image {
             width: 50%;
+        }
+
+        .skills-image img {
+            width: 100%;
             height: auto;
             border-radius: 10px;
-     
+            object-fit: cover;
         }
 
-        .subtitle1 {
-            color: red;
-            font-size: 16px;
+        .skills-list {
+            width: 50%;
+            min-width: 250px;
+        }
+
+        .skills {
             display: flex;
-            align-items: center;
-   
-        }
-
-        .subtitle1::before {
-            content: '';
-            width: 30px;
-            height: 2px;
-            background: #A8641D;
-            margin-right: 10px;
-        }
-
-        .title {
-            font-size: 13px;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .skill {
-            margin-bottom: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .skill:hover {
+            background: #eaeaea;
+            transform: translateY(-2px);
         }
 
         .skill-name {
-            font-size: 18px;
-            margin-bottom: 8px;
-
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
         }
 
         .progress {
             width: 100%;
-            height: 12px;
-            background: #dad6d6;
-            border-radius: 6px;
+            background: #eaeaea;
+            border-radius: 8px;
+            height: 25px;
             overflow: hidden;
             position: relative;
         }
 
         .progress-1 {
             height: 100%;
-            background: #ff4d4d;
+            background-color: #ff4757;
             width: 0;
             transition: width 2s ease-in-out;
         }
@@ -614,30 +613,50 @@
         .progress span {
             position: absolute;
             right: 10px;
-            top: -30px;
+            top: 50%;
+            transform: translateY(-50%);
             font-size: 16px;
             color: #333;
         }
 
         .modal-button {
-            display: inline-block;
-            padding: 12px 25px;
             background: #181717;
-            color: #F9D342;
+            color: #f9d342;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 16px;
-            margin-top: 25px;
+            font-size: 18px;
             cursor: pointer;
-            opacity: 0.9;
+            display: block;
+            text-align: center;
+            margin: 20px auto 0;
+            transition: background 0.3s, transform 0.3s;
         }
 
-        .modal-button:hover{
-            color: #dad6d6;
+        .modal-button:hover {
+            background: #f9d342;
+            color: #181717;
+            transform: scale(1.05);
         }
-        /********** skills CSS end *********/
+
+        .subtitle1 {
+            text-align: center;
+            font-size: 24px;
+            color: #312D2D;
+            margin-bottom: 20px;
+        }
+
+        .subtitle1::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background: #A8641D;
+            margin-right: 10px;
+        }
 
 
+        
          /*****quality services*********/
 
         .quality-services {
@@ -656,21 +675,21 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 30px;
             margin-bottom: 10px;
             color: white;
         }
 
         h2 {
             font-size: 18px;
-            color: white;
+            color: black;
             margin-bottom: 40px;
         }
 
         .services {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px; /* khoảng cách giữa các ô */
+            gap: 20px;
         }
 
         .service {
@@ -699,7 +718,6 @@
 
         p {
             font-size: 40px;
-            color: #666;
         }
 
 
@@ -1128,6 +1146,7 @@
         }
 
         p {
+            color: white;
             font-size:20px;
         }
 
@@ -1176,11 +1195,10 @@
    .container-map {
     margin-top: 30px;
     width: 100%;
-    height: 100%;
    }
 
    /*** footer CSS ***/
-  .footer-section {
+    .footer-section {
             font-family: 'Montserrat', sans-serif;
             background-color: #e74c3c;
             color: white;
