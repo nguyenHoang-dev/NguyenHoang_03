@@ -1,0 +1,46 @@
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+  flex: 100;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+.container {
+  width: 100%;
+  background: rgb(71, 139, 241);
+  padding: 2px;
+  text-align: center; /* Căn giữa nội dung text bên trong */
+  border-radius: 10px;
+  color:aqua;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 cột đều nhau */
+  text-align: center;
+  font-weight: bold;
+}
+
+.table-header {
+  background-color: #71adec;
+  padding: 10px;
+  border: 1px solid #4e8aca;
+  border-radius: 10px;
+}
+
+

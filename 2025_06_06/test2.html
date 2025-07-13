@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Excellent Portfolio</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .portfolio-title {
+            color: #EF233C;
+            font-weight: bold;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .portfolio-heading {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 24px;
+            color: #22223B;
+        }
+        .categories {
+            margin-bottom: 32px;
+        }
+        .category-btn {
+            display: inline-block;
+            background: #EF233C;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 22px;
+            margin: 0 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+        }
+        .category-btn.active,
+        .category-btn:hover {
+            background: #fff;
+            color: #EF233C;
+            border: 1px solid #EF233C;
+        }
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            overflow: hidden;
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .project-card.hidden {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+        .project-card img:hover {
+            transform: scale(1.05);
+        }
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            background: #fff;
+        }
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #22223B;
+        }
+        .add-btn {
+            background: #EF233C;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+        }
+        .add-btn:hover {
+            background: #fff;
+            color: #EF233C;
+            border: 1px solid #EF233C;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <div class="portfolio-title">— MY PORTFOLIO</div>
+        <div class="portfolio-heading">My Excellent Portfolio</div>
+        <div class="categories">
+            <button class="category-btn active" data-filter="*">All</button>
+            <button class="category-btn" data-filter="web-design">Web Design</button>
+            <button class="category-btn" data-filter="mobile-apps">Mobile Apps</button>
+            <button class="category-btn" data-filter="game-dev">Game Dev</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card web-design">
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/2c/04/79/2c0479b0ead51f3099c2db0819066cdd.jpg" alt="eCommerce Website">
+                </div>
+                <div class="project-info">
+                    <span class="project-title">eCommerce Website</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="project-card web-design">
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/a7/5d/79/a75d7955ab42ef45e0fc19ef962d7148.jpg" alt="Product Landing Page">
+                </div>
+                <div class="project-info">
+                    <span class="project-title">Product Landing Page</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="project-card game-dev">
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/3e/57/0e/3e570e6d1f1bf1306086a9eb267db0ab.jpg" alt="JavaScript quiz game">
+                </div>
+                <div class="project-info">
+                    <span class="project-title">JavaScript quiz game</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="project-card game-dev">
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/b2/fc/64/b2fc64fdd65e83d7caecec5aefd9f5e7.jpg" alt="JavaScript drawing">
+                </div>
+                <div class="project-info">
+                    <span class="project-title">JavaScript drawing</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="project-card mobile-apps">
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/4c/72/09/4c72099507913a8120bb12de64044a2d.jpg" alt="Social Mobile Apps">
+                </div>
+                <div class="project-info">
+                    <span class="project-title">Social Mobile Apps</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+            <div class="project-card web-design">
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/2c/04/79/2c0479b0ead51f3099c2db0819066cdd.jpg" alt="Company Website">
+                </div>
+                <div class="project-info">
+                    <span class="project-title">Company Website</span>
+                    <button class="add-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lấy tất cả nút filter
+        const buttons = document.querySelectorAll('.category-btn');
+        const cards = document.querySelectorAll('.project-card');
+
+        // Thêm sự kiện click cho các nút
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Xóa class active khỏi tất cả nút
+                buttons.forEach(btn => btn.classList.remove('active'));
+                // Thêm class active cho nút được click
+                button.classList.add('active');
+
+                // Lấy giá trị data-filter
+                const filter = button.getAttribute('data-filter');
+
+                // Lọc các project card
+                cards.forEach(card => {
+                    if (filter === '*' || card.classList.contains(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -7,18 +7,19 @@
 </head>
 <body>
     <script>
-        function veTamGiac() {
-            n = Number(prompt("nhap so hang cua tam giac: "))
-            result = "";
-            for ( i = 1; i <= n; i++) {
-                for ( j = 1; j <= i; j ++) {
-                    result += "*";
+        function veTamGiac(n){
+            str="";
+            for ( i = 1; i <= n; i++){
+                for ( j = 1; j <= i; j++){
+                    str += "*";
                 }
-                result += "<br>";
+                str += "<br>";  
             }
-            return result;
+            return str;
         }
-        document.write("<pre>" + veTamGiac() + "</pre>");
+        n = Number(prompt("nhap so n: "))
+        document.writeln("<pre>" + veTamGiac(n) + "</pre>")
+
     </script>
 </body>
 </html>

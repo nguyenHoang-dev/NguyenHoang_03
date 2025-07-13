@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Page with Modal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff4d4d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            background: #fff;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+        .modal-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .left-section {
+            flex: 1;
+            background: #f0f0f0;
+        }
+        .left-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .right-section {
+            flex: 1;
+            padding: 50px;
+            background: #fff;
+        }
+        .subtitle {
+            color: #ff4d4d;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .subtitle::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: #ff4d4d;
+            margin-right: 10px;
+        }
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .description {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .skills .skill {
+            margin-bottom: 25px;
+        }
+        .skill-name {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: #ff4d4d;
+            border-radius: 6px;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+        .progress-bar span {
+            position: absolute;
+            right: 0;
+            top: -30px;
+            font-size: 16px;
+            color: #333;
+        }
+        .modal-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff4d4d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="button" onclick="openModal()">Learn More</a>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-title">Thông tin chi tiết</div>
+            <div class="left-section">
+                <img src="https://example.com/your-image.jpg" alt="Person working on laptop">
+            </div>
+            <div class="right-section">
+                <div class="subtitle">Learn About Me</div>
+                <h1 class="title">10 Years Experience</h1>
+                
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-name">Web Design</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Web Development</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%;">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Apps Design</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Apps Development</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="modal-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'flex';
+            // Trigger animation for progress bars when modal opens
+            document.querySelectorAll('.progress').forEach(bar => {
+                bar.style.width = bar.style.width; // Re-apply width to trigger animation
+            });
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

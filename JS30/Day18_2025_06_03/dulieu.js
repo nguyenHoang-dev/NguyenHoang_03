@@ -93,23 +93,21 @@
             hienThiSanPham();
         };
 
+        function timKiemSanPham() {
+            let searchId = parseInt(document.getElementById("timkiem").value);
+            if(!searchId) {
+                hienThiThongBao("Vui lòng nhập sản phẩm để tìm kiếm");
+                hienThiSanPham();
+                return
+            }
 
-    function timKiemSanPham() {
-        let timkiem = parseInt(document.getElementById("timkiem").value);
-        if (!timkiem) {
-            hienThiThongBao("Vui lòng nhập mã sản phẩm để tìm kiếm!");
-            hienThiSanPham();
-            return;
+            let ketQua = sanPhams.filter(sp => sp.id === timkiem);
+            if (ketQua.length === 0) {
+                hienThiThongBao(`Không tìm thấy sản phẩm với Id ! ${searchId}`);
+                document.getElementById("sanPhamBody").inneML = "";
+                document.getElementById("tongGiatri").innerText = "0 VNĐ"
+                document.getElementById("sanPhamDatNhat").innerText = "không có sản phẩm";
+                return;
+            }
+            hienThiSanPham(ketQua);
         }
-
-        let ketQua = sanPhams.filter(sp => sp.id === timkiem);
-        if (ketQua.length === 0) {
-            hienThiThongBao(`Không tìm thấy sản phẩm với ID ${searchId}`);
-            document.getElementById("sanPhamBody").innerHTML = "";
-            document.getElementById("tongGiaTri").innerText = "0 VNĐ";
-            document.getElementById("sanPhamDatNhat").innerText = "Không có sản phẩm";
-            return;
-        }
-
-        hienThiSanPham(ketQua);
-    }

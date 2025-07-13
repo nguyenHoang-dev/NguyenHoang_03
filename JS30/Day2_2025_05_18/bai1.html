@@ -6,27 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-<script>
-    function fibonaci(n) {                     
-        if (n === 0) {                          
-            return 0;                           
-        }                                       
-        if (n === 1){                           
-            return 1;                           
+    <script>
+        function fibonacci(n){
+            if ( n == 0) {
+                return 0;
+            }
+            if ( n == 1){
+                return 1;
+            }
+            var a = 0;
+            var b =1;
+            var c;
+            for ( i = 2;i <= n; i++){
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            return c;
         }
-
-        var a = 0  // F[i -2]
-        var b = 1 // F[i -1]
-        var c;   // F[i]
-        for (i = 2; i <= n; i++) {
-            c = a + b; 
-            a = b; 
-            b = c;
-        }
-        return b;
-    }
-    n = Number(prompt("nhap so n: "));
-    document.writeln("day so fibonaci thu " + n + " la: " + fibonaci(n));
-</script>
+        n = Number(prompt("nhap so n: "))
+        document.writeln("so fibonacci thu " + n + "  la: " + fibonacci(n));
+    </script>
 </body>
 </html>
