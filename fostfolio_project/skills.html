@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <style>
+        .container-skills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .skills-section {
+         
+            margin: 20px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 1200px;
+            display: block;
+            gap: 20px;
+        }
+
+        .skills-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            width: 100%;
+            /* Removed border-bottom */
+        }
+
+        .skills-title span {
+            color: #1e90ff;
+            font-size: 20px;
+            display: block;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .skills-description {
+            width: 50%;
+            min-width: 250px;
+        }
+
+        .skills-description h3 {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .skills-description p {
+            text-align: justify;
+            font-size: 20px;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .skills-description a {
+            background: #1e90ff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .skills-description a:hover {
+            background: #104e8b;
+        }
+
+        .skills-list {
+            width: 50%;
+            min-width: 250px;
+            margin-top:30px;
+
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            width: 100px;
+        }
+
+        .progress {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 8px;
+            height: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #1e90ff;
+            border-radius: 8px;
+            transition: width 1s ease-in-out;
+        }
+
+        .progress-percentage {
+            margin-left: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div class="container-skills">
+    <div class="skills-section">
+        <div class="skills-title">My Skills <span>What I know</span></div>
+        <div class="skills-container">
+            <div class="skills-description">
+                <h3>Technologies and tool</h3>
+                <p>Using a combination of cutting-edge technologies and reliable open-source software I build user-focused, performant apps and websites for smartphones, tablets, and desktops. Monitor and process pull requests for production deployments.</p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="skills-list">
+                <div class="skills">
+                    <div class="skill">
+                        <span class="skill-name">HTML</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                        <span class="progress-percentage">90%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">CSS</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
+                        <span class="progress-percentage">60%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </div>
+                        <span class="progress-percentage">70%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Python</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
+                        <span class="progress-percentage">60%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">MySQL</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 50%;"></div>
+                        </div>
+                        <span class="progress-percentage">50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.progress-bar').forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
